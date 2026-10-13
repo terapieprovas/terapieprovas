@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wellness terapie pro dospělé a děti s postižením pohybového aparátu a chronickými zdravotními obtížemi</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Nunito+Sans:wght@400;600&display=swap">
+<style>
+:root{--bg:#FFF1D6;--surface:#FFFAEF;--soft:#FFD98A;--text:#3F2A1E;--muted:#7A5A45;--accent:#C9501D;--deep:#8A3A17;--on-deep:#FFF1D6;--line:#F3CF8C;
+--serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241812;--surface:#30211A;--soft:#4A3324;--text:#F4E3CC;--muted:#CDB394;--accent:#E39A55;--deep:#1B110C;--on-deep:#F4E3CC;--line:#54402F}}
+:root[data-theme="dark"]{--bg:#241812;--surface:#30211A;--soft:#4A3324;--text:#F4E3CC;--muted:#CDB394;--accent:#E39A55;--deep:#1B110C;--on-deep:#F4E3CC;--line:#54402F}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 var(--sans)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;margin:0 0 .5em}
+p{margin:0 0 1em}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);color:var(--deep)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:var(--accent)}}
+:root[data-theme="dark"] h2{color:var(--accent)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px 22px;flex-wrap:wrap;align-items:center;padding-top:12px;padding-bottom:12px}
+nav b{font-family:var(--serif);font-size:1.05rem;margin-right:auto}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+.hero{background:linear-gradient(135deg,#FFC94D 0%,#FBA24A 55%,#F47E4D 100%);color:#3F2A1E;padding:84px 0 88px;position:relative;overflow:hidden;border-radius:0 0 56px 56px}.hero:before{content:"";position:absolute;left:-70px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:#FFE7A8;opacity:.55}
+.hero:after{content:"";position:absolute;right:-90px;top:-100px;width:360px;height:360px;border-radius:50%;background:#FFF1D6;opacity:.5}
+.hero .wrap{position:relative;z-index:1;max-width:820px}
+.hero h1{font-size:clamp(1.9rem,5.6vw,3.2rem);margin-bottom:.6em}
+.hero p{font-size:1.15rem;max-width:60ch}
+.btn{display:inline-block;background:#3F2A1E;color:#FFF1D6;padding:14px 30px;border-radius:999px;text-decoration:none;font-weight:600;margin-top:10px}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.about{max-width:760px}
+
+.portrait{aspect-ratio:4/5;background:linear-gradient(160deg,#FFD98A,#FBA24A);border-radius:50% 50% 30px 30px}
+.grid3{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--surface);border:2px solid var(--line);border-radius:26px;padding:26px}.card h3:before{display:block;font-size:2rem;margin-bottom:6px}.card:nth-child(1) h3:before{content:"🌸"}.card:nth-child(2) h3:before{content:"🎈"}.card:nth-child(3) h3:before{content:"☀️"}.grid3 .card:nth-child(1){background:#FFE9B8}.grid3 .card:nth-child(2){background:#FFDCC2}.grid3 .card:nth-child(3){background:#FFF0C9}
+.card h3{font-size:1.2rem;color:var(--accent)}
+.card p{color:var(--muted);margin:0}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+
+.steps{margin:0;padding:0;list-style:none;display:grid;gap:18px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:16px}
+.steps li:before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-weight:600}
+.steps h3{font-size:1.1rem;margin-bottom:.2em}
+.gallery{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+figure{margin:0}
+.gallery figure:nth-child(odd) .tile{transform:rotate(-1.2deg)}.gallery figure:nth-child(even) .tile{transform:rotate(1.2deg)}.tile{position:relative;aspect-ratio:4/3;border-radius:22px;overflow:hidden;background:var(--soft);border:3px solid #fff;box-shadow:0 4px 12px rgba(138,58,23,.15);cursor:zoom-in;display:grid;place-items:center;color:var(--muted);font-size:.9rem;padding:0;width:100%}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.editing .tile{cursor:copy}
+.rm{position:absolute;top:8px;right:8px;background:var(--deep);color:var(--on-deep);border:0;border-radius:999px;width:30px;height:30px;font-size:16px;cursor:pointer;display:none}
+.editing .tile.has .rm{display:block}
+figcaption{padding:8px 2px 0;font-size:.92rem;color:var(--muted)}
+.contact{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.contact dt{font-weight:600;color:var(--accent)}
+.contact dd{margin:0 0 14px}
+footer{border-radius:40px 40px 0 0;background:var(--deep);color:var(--on-deep);padding:28px 0;font-size:.92rem}
+[contenteditable="true"]{outline:2px dashed var(--accent);outline-offset:4px;border-radius:4px;cursor:text}
+[contenteditable="true"]:focus{background:rgba(181,96,31,.12)}
+.bar{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.bar button{border:0;border-radius:999px;padding:12px 20px;font:600 15px var(--sans);cursor:pointer;background:var(--deep);color:var(--on-deep);box-shadow:0 4px 14px rgba(58,40,29,.3)}
+.bar button.on{background:var(--accent);color:#fff}.bar button{background:var(--accent);color:#fff}
+.bar .ghost{display:none;background:var(--surface);color:var(--text);border:1px solid var(--line)}
+.editing .bar .ghost{display:block}
+.lb{position:fixed;inset:0;background:rgba(30,18,10,.92);display:none;place-items:center;z-index:30;padding:20px}
+.lb.show{display:grid}
+.lb img{max-width:100%;max-height:88%;border-radius:8px}
+.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:16px;background:none;border:0;color:#fff;font-size:34px;cursor:pointer}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b data-e="brand">Wellness terapie</b><a href="#o-mne">O mně</a><a href="#nabidka">Nabídka</a><a href="#jak">Jak to probíhá</a><a href="#galerie">Fotogalerie</a><a href="#kontakt">Kontakt</a></div></nav>
+
+<header class="hero"><div class="wrap">
+<h1 data-e="title">Wellness terapie pro dospělé a děti s postižením pohybového aparátu a chronickými zdravotními obtížemi</h1>
+<p data-e="lead">Vítejte! U mě se tělo i mysl mohou v klidu a s úsměvem uvolnit. Pracuji jemně, v tempu, které vyhovuje vám nebo vašemu dítěti, a každé sezení ladím na míru.</p>
+<a class="btn" href="#kontakt" data-e="cta">Ozvěte se, těším se na vás!</a>
+</div></header>
+
+<section id="o-mne"><div class="wrap about">
+<div>
+<h2 data-e="aboutH">O mně</h2>
+<p data-e="about1">Jmenuji se Jana Nováková a věnuji se wellness terapii pro lidi, kteří žijí s omezením pohybu nebo dlouhodobými zdravotními obtížemi. Vím, že samotný příchod na terapii může být náročný, proto se snažím vytvořit prostředí, kde se budete cítit bezpečně a přijatě.</p>
+<p data-e="about2">Mé zkušenosti vycházejí z mnohaleté práce s dětmi i dospělými. Terapii vždy přizpůsobuji konkrétnímu člověku a spolupracuji s rodinou i ošetřujícími odborníky.</p>
+</div></div></section>
+
+<section id="nabidka" class="alt"><div class="wrap">
+<h2 data-e="offerH">Co nabízím</h2>
+<div class="grid3">
+<div class="card"><h3 data-e="s1t">Relaxační masáže</h3><p data-e="s1p">Šetrné masážní techniky přizpůsobené možnostem těla, které pomáhají uvolnit napětí a zlepšit celkovou pohodu.</p></div>
+<div class="card"><h3 data-e="s2t">Terapie pro děti</h3><p data-e="s2p">Hravý a trpělivý přístup, při kterém se děti cítí bezpečně. Rodiče jsou vítáni po celou dobu sezení.</p></div>
+<div class="card"><h3 data-e="s3t">Podpora při chronických obtížích</h3><p data-e="s3p">Pravidelné wellness sezení jako doplněk péče, který přináší chvíle klidu a úlevy v každodenním životě.</p></div>
+</div></div></section>
+
+<section id="jak"><div class="wrap">
+<h2 data-e="howH">Jak terapie probíhá</h2>
+<ol class="steps">
+<li><div><h3 data-e="h1t">Úvodní rozhovor</h3><p data-e="h1p">Společně probereme vaše potřeby, přání a případná omezení.</p></div></li>
+<li><div><h3 data-e="h2t">Sezení na míru</h3><p data-e="h2p">Postup i délku upravíme tak, aby vám bylo pohodlně a příjemně.</p></div></li>
+<li><div><h3 data-e="h3t">Doporučení a další kroky</h3><p data-e="h3p">Domluvíme se na pravidelnosti návštěv a na tom, co si můžete zkusit i doma.</p></div></li>
+</ol>
+<p style="margin-top:22px;color:var(--muted)" data-e="disc">Wellness terapie nenahrazuje lékařskou péči ani léčbu.</p>
+</div></section>
+
+<section id="galerie" class="alt"><div class="wrap">
+<h2 data-e="galH">Fotogalerie</h2>
+<p data-e="galP" style="color:var(--muted)">Nahlédněte do prostředí, kde terapie probíhá.</p>
+<div class="gallery" id="gal"></div>
+</div></section>
+
+<section id="kontakt"><div class="wrap">
+<h2 data-e="conH">Kontakt</h2>
+<dl class="contact">
+<div><dt data-e="c1l">Telefon</dt><dd data-e="c1v">+420 123 456 789</dd></div>
+<div><dt data-e="c2l">E-mail</dt><dd data-e="c2v">jana@priklad.cz</dd></div>
+<div><dt data-e="c3l">Adresa</dt><dd data-e="c3v">Ulice 1, 110 00 Praha</dd></div>
+<div><dt data-e="c4l">Ordinační doba</dt><dd data-e="c4v">Po–Pá 9:00–17:00, po předchozí domluvě</dd></div>
+</dl></div></section>
+
+<footer><div class="wrap" data-e="foot">© 2026 Jana Nováková · Wellness terapie</div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-label="Zvětšená fotografie"><button aria-label="Zavřít" id="lbx">×</button><img alt=""></div>
+<input type="file" accept="image/*" id="file" hidden>
+<div class="bar"><button class="ghost" id="reset">Obnovit původní</button><button id="tog">Upravit stránku</button></div>
+
+<script>
+(function(){
+var P="wt1:",editing=false,mem={};
+function get(k){try{return localStorage.getItem(P+k)}catch(e){return mem[k]||null}}
+function set(k,v){try{localStorage.setItem(P+k,v)}catch(e){mem[k]=v}}
+function del(k){try{localStorage.removeItem(P+k)}catch(e){delete mem[k]}}
+var els=[].slice.call(document.querySelectorAll("[data-e]"));
+els.forEach(function(el){el.dataset.orig=el.innerHTML;var v=get("t:"+el.dataset.e);if(v!==null)el.innerHTML=v;
+el.addEventListener("input",function(){set("t:"+el.dataset.e,el.innerHTML)});
+el.addEventListener("keydown",function(e){if(e.key==="Enter"&&el.tagName!=="P"){e.preventDefault()}})});
+els.forEach(function(el){el.addEventListener("click",function(e){if(editing&&el.tagName==="A")e.preventDefault()})});
+
+var gal=document.getElementById("gal"),N=8,file=document.getElementById("file"),cur=null;
+var caps=["Terapeutický kabinet","Relaxační místnost","Pomůcky pro sezení","Příjemné prostředí","Vstup bez bariér","Klidný kout","Aromaterapie","Čekárna"];
+for(let i=0;i<N;i++){
+var f=document.createElement("figure");
+f.innerHTML='<button class="tile" type="button" aria-label="Fotografie '+(i+1)+'"><span>Přidat fotografii</span><span class="rm" role="button" aria-label="Odebrat fotografii">×</span></button><figcaption data-e="cap'+i+'">'+caps[i]+'</figcaption>';
+gal.appendChild(f);
+var cap=f.querySelector("figcaption");cap.dataset.orig=cap.innerHTML;els.push(cap);
+var cv=get("t:cap"+i);if(cv!==null)cap.innerHTML=cv;
+cap.addEventListener("input",function(c,n){return function(){set("t:cap"+n,c.innerHTML)}}(cap,i));
+var t=f.querySelector(".tile");t.dataset.i=i;
+var img=get("img"+i);if(img)show(t,img);
+t.addEventListener("click",function(e){
+var tile=e.currentTarget;
+if(e.target.classList.contains("rm")){del("img"+tile.dataset.i);tile.classList.remove("has");tile.innerHTML='<span>Přidat fotografii</span><span class="rm" role="button" aria-label="Odebrat fotografii">×</span>';return}
+if(editing){cur=tile;file.value="";file.click()}
+else if(tile.classList.contains("has")){var lb=document.getElementById("lb");lb.querySelector("img").src=tile.querySelector("img").src;lb.classList.add("show")}});
+}
+function show(t,src){t.classList.add("has");t.innerHTML='<img alt="" src="'+src+'"><span class="rm" role="button" aria-label="Odebrat fotografii">×</span>'}
+file.addEventListener("change",function(){
+var fl=file.files[0];if(!fl||!cur)return;var tile=cur;
+var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){
+var s=Math.min(1,900/Math.max(im.width,im.height)),c=document.createElement("canvas");
+c.width=im.width*s;c.height=im.height*s;c.getContext("2d").drawImage(im,0,0,c.width,c.height);
+var d=c.toDataURL("image/jpeg",.8);set("img"+tile.dataset.i,d);show(tile,d)};im.src=r.result};r.readAsDataURL(fl)});
+
+var lb=document.getElementById("lb");
+lb.addEventListener("click",function(){lb.classList.remove("show")});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")lb.classList.remove("show")});
+
+var tog=document.getElementById("tog");
+tog.addEventListener("click",function(){
+editing=!editing;document.body.classList.toggle("editing",editing);tog.classList.toggle("on",editing);
+tog.textContent=editing?"Hotovo":"Upravit stránku";
+els.forEach(function(el){el.setAttribute("contenteditable",editing?"true":"false");if(!editing)el.removeAttribute("contenteditable")})});
+document.getElementById("reset").addEventListener("click",function(){
+if(!confirm("Opravdu obnovit všechny texty a odebrat fotografie?"))return;
+els.forEach(function(el){el.innerHTML=el.dataset.orig;del("t:"+el.dataset.e)});
+document.querySelectorAll(".tile").forEach(function(t){del("img"+t.dataset.i);t.classList.remove("has");t.innerHTML='<span>Přidat fotografii</span><span class="rm" role="button" aria-label="Odebrat fotografii">×</span>'})});
+})();
+</script>
+</body>
+</html>
