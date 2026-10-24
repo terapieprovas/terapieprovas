@@ -139,7 +139,7 @@ el.addEventListener("keydown",function(e){if(e.key==="Enter"&&el.tagName!=="P"){
 els.forEach(function(el){el.addEventListener("click",function(e){if(editing&&el.tagName==="A")e.preventDefault()})});
 
 var gal=document.getElementById("gal"),N=8,file=document.getElementById("file"),cur=null;
-var caps=["Terapeutický kabinet","Relaxační místnost","Pomůcky pro sezení","Příjemné prostředí","Vstup bez bariér","Klidný kout","Aromaterapie","Čekárna"];
+var caps=["ACUPERO 1","ACUPERO 2","ACUPERO 3","BAŇKY 1","BAŇKY 2","DRAGON","RÁZOVÁ VLNA","AKUPUNKTURNÍ STIMULÁTOR"];
 for(let i=0;i<N;i++){
 var f=document.createElement("figure");
 f.innerHTML='<button class="tile" type="button" aria-label="Fotografie '+(i+1)+'"><span>Přidat fotografii</span><span class="rm" role="button" aria-label="Odebrat fotografii">×</span></button><figcaption data-e="cap'+i+'">'+caps[i]+'</figcaption>';
